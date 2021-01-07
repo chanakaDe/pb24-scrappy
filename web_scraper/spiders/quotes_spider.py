@@ -5,8 +5,9 @@ class QuotesSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            'http://quotes.toscrape.com/page/1/',
-            'http://quotes.toscrape.com/page/2/',
+            'https://www.sparhandy.de/apple/iphone-11.html',
+            'https://www.sparhandy.de/samsung/galaxy-s20-fe.html',
+            'https://www.sparhandy.de/huawei/p40-pro.html'
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
